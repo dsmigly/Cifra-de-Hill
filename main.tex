@@ -1,0 +1,499 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[portuguese]{babel}
+%\usepackage{cat}
+\usepackage{estilosa}
+\usepackage[alf]{abntex2cite}
+%\usepackage[utf8]{inputenc}
+\usepackage[T4, T1]{fontenc}
+\usepackage{bbm}
+\usepackage{ wasysym }
+%\usepackage[top=30mm, bottom=30mm, left=30mm, right=30mm]{geometry}
+%\usepackage{framed}
+%\usepackage{booktabs}
+%\usepackage{color}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{float}
+%\usepackage[table,xcdraw]{xcolor}
+%\usepackage{pstricks}
+%\usepackage{ mathrsfs }
+%\graphicspath{{./Figuras/}}    
+%\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+\newcommand{\AS}[1]{{\fontencoding{T4}\selectfont#1}}
+
+
+\usepackage{stackengine,graphicx}
+\stackMath
+\newcommand\frightarrow{\scalebox{1}[.4]{$\longrightarrow$}}
+\newcommand\darrow[1][]{\mathrel{\stackon[1pt]{\stackanchor[1pt]{\frightarrow}{\frightarrow}}{\scriptstyle#1}}}
+\newcommand\farrow[1][]{\mathrel{\stackon[1pt]{\frightarrow}{\scriptstyle#1}}}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtext}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{wrapfig}
+\usepackage[T1]{fontenc}
+\usepackage{blindtext}
+\usepackage{textcomp}
+\usepackage{tasks}
+\usepackage{amsthm}
+\usepackage{setspace}
+%\usepackage{polyglossia}
+\usepackage{fancybox}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx, color}
+%\newcommand{\sen}{{\rm sen}}
+%\newcommand{\tg}{{\rm tg }}
+%\newcommand{\cotg}{{\rm cotg }}
+%\newcommand{\cossec}{{\rm cossec }}
+%\newcommand{\arctg}{{\rm arctg }}
+%\newcommand{\arcsen}{{\rm arcsen }}
+\newcommand{\negrito}[1]{\mbox{\boldmath{$#1$}}} 
+\newtheorem*{axioma}{Axioma da Infinidade}
+\usepackage{pifont}
+\usepackage[framemethod=TikZ]{mdframed}
+%\newcommand{\heart}{\ensuremath\heartsuit}
+%\newcommand{\diamonde}{\ensuremath\diamondsuit}
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+\theoremstyle{definition}
+%\newtheorem{definicao}{Definição}
+%\newtheorem{exemplo}{Exemplo}
+%\newtheorem{proposicao}{Exemplo}
+%\newtheorem{teorema}{Teorema}
+%\newtheorem{lema}{Lema}
+%\newtheorem{corolario}{Corolário}
+\theoremstyle{plain}
+\newtheorem*{afi}{Afirmação}
+\newtheorem*{propo}{Proposição}
+\newtheorem{dem}{Demonstração}
+\newtheorem{teo}{Teorema}
+\newtheorem*{lem}{Lema}
+\newtheorem{coro}{Corolário}
+\newtheorem{afirmacao}{Afirmação}
+\newtheorem{exercicio}{Exercício}
+
+%\theoremstyle{Colorido}
+\newtheorem{questao}{\textcolor{Floresta}{\textit{\bf Questão}}}
+\newtheoremstyle{Colorido}{}{}{\color{Floresta}}{}{\color{Floresta}\bfseries}{}{ }{}
+\newtheorem{theorem}{Theorem}
+\newtheoremstyle{solu}{}{}{}{}{\color{red}\bfseries}{}{ }{}
+\theoremstyle{solu}
+\newtheorem*{resp}{Solução}
+\newtheoremstyle{dotlessP}{}{}{}{}{\color{Floresta}\bfseries}{}{ }{}
+\theoremstyle{dotlessP}
+\newtheorem{sol}{Questão}
+
+\newcommand{\solucao}[1]{\textcolor{blue}{\textbf{Solução:} #1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+
+\newcommand{\definiendum}[2]{\textbf{#1} ALkn \textit{#2}}
+
+%\definiendum{dfd}{hcervh}
+
+\newcommand         \ie     {\textit{i.e.}}
+
+
+%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Faculdade de Tecnologia Termomecanica}
+\newcommand{\centro}{Centro Educacional da Fundação Salvador Arena}
+%\newcommand{\departamento}{Departamento}
+%\newcommand{\curso}{Curso}
+%\DeclareMathOperator{\Tr}{Tr} \DeclareMathOperator{\Spec}{Spec}
+\newcommand{\professor}{Bruno Henrique Michelin Silva, Douglas de Araujo Smigly, Gileade Lamede Martins}
+\newcommand{\disciplina}{Tópicos Avançados em Redes}
+\newcommand{\nusp}{081160008, 081160030, 081160044}
+\newcommand{\sigla}{MAT6705}
+\newcommand{\entrega}{9 de abril de 2018}
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+	\cornersize{.3} 
+	\mdfdefinestyle{MyFrame}{%
+    linecolor=blue,
+    outerlinewidth=2pt,
+    roundcorner=20pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=20pt,
+    innerleftmargin=20pt,
+    backgroundcolor=gray!24!white}
+    
+  		\cornersize{.3} 
+	\mdfdefinestyle{MyFramew}{%
+    linecolor=Floresta,
+    outerlinewidth=2pt,
+    roundcorner=20pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=20pt,
+    innerleftmargin=20pt,
+    backgroundcolor=Floresta!24!white}
+%ATE AQUI !!!
+%ATE AQUI !!!
+
+
+\makeindex
+
+\begin{document}
+\definecolor{Floresta}{rgb}{0.13,0.54,0.13}
+	\thispagestyle{empty}
+	
+	\begin{center}
+%	\includegraphics[width=\linewidth/3]{logo_pic}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+%		\departamento
+		\par
+%		\curso
+		\par
+		\vspace{24pt}
+		\LARGE \textbf{}
+		\par
+		\par
+		\par
+		\par
+		\LARGE \textbf{Cifra de Hill}
+		\par
+		\par
+		\par
+		\par
+		\par
+	
+	\end{center}
+	
+	\vspace{24pt}
+	
+	%
+%	\begin{tabular}{ |l|p{12cm}| }
+%		
+%		\hline
+%		\multicolumn{2}{|c|}{\textbf{Dados de Identificação}} \\
+%			\hline
+%		Disciplina:        &    \disciplina          \\
+%		\hline
+%		Professor:         &    \professor           \\
+%	\hline
+%	Aluno(a):         &\\
+%		\hline
+%	Multiplicidade:  & \ \ \ \ \ \ \vline Nível: \vline\\
+%	
+%		\hline
+	%\end{tabular}
+	%
+	\begin{tabular}{ |l|p{11cm}| }
+		
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Dados de Identificação}} \\
+			\hline
+		Nome:        &  \professor \\
+		\hline
+		Número USP:      & \nusp  \\
+		\hline
+		Curso:        &  \disciplina \\
+		\hline
+		 Código:        &  \sigla \\
+%		\hline
+%				Data de entrega:      &  \entrega \\
+		\hline
+	\end{tabular}
+	\vspace{24pt}
+
+	
+	%\begin{snugshade}
+	%	\section{O... aumento  }  
+	%\end{snugshade}
+
+	
+\title{Continuity and Uniform Continuity}
+\author{521}
+\newpage
+\tableofcontents
+
+%\begin{center}
+% \begin{figure}[!htb]
+%    \centering
+%    \includegraphics[scale=0.25]{ordinal}
+%  \end{figure}
+%  \end{center}
+%\chapter{dd}
+
+\newpage
+
+\section{Criptoanálise}
+
+Decifre o criptograma 
+\begin{center}
+\textbf{S \k{T} \~{O} V \^{s} \AS{\O} O \AS{\m{k}} ó M \k{T} \"{I} E \H{U} á}
+\end{center}
+%S Ţ Õ V ŝ Ø O ƙ ó M Ţ Ï E Ű á
+
+com a chave de criptografia
+\[
+\begin{pmatrix}
+1 & 0 & 0 \\
+1 & 3 & 1 \\
+1 & 2 & 0
+\end{pmatrix}
+\]
+
+Seja $M = \begin{pmatrix}
+1 & 0 & 0 \\
+1 & 3 & 1 \\
+1 & 2 & 0
+\end{pmatrix}.$ 
+
+Para o processo, assumiremos caracteres Unicode, num intervalo de 0 a 1114110. Assim, teremos $1114111$ caracteres disponíveis, e trabalharemos com matrizes em $\mathcal{M}_{m \times n}(\mathbb{Z}_{1114111}).$ Como $M \in \mathcal{M}_3(\mathbb{Z}_{1114111}),$ devemos organizar as letras do criptograma numa matriz $5 \times 3$ com entradas em $\mathbb{Z}_{1114111}$. Para isso, precisamos do código Unicode de cada caractere:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Letra   & Código \\ \hline
+    S   &  83 \\ \hline
+\k{T}   &  354\\ \hline
+\~{O}   &  213 \\ \hline
+V       &  86 \\ \hline
+\^{s}   &  349\\ \hline
+\AS{\O} &  216\\ \hline
+O       &  79    \\ \hline
+\AS{\m{k}} & 409    \\ \hline
+ó       & 243 \\ \hline
+M       & 77  \\ \hline
+\k{T}   & 354  \\ \hline
+\"{I}   &  207 \\ \hline
+E       &  69  \\ \hline
+\H{U}   &  368  \\ \hline
+á       &   225 \\ \hline
+\end{tabular}
+\end{center}
+E assim, obtemos a seguinte matriz $C \in \mathcal{M}_3(\mathbb{Z}_{1114111}):$
+\[
+\begin{pmatrix}
+83 & 354 & 213  \\ 
+86 & 349 & 216  \\ 
+79 & 409 & 243  \\
+77 & 354  &  207 \\
+69 & 368 & 225
+\end{pmatrix}
+\]
+Agora, vamos decompor $C$ em 5 vetores-linha, de modo que
+\[
+C = \begin{pmatrix}
+c_1 \\
+c_2 \\
+c_3 \\
+c_4 \\
+c_5
+\end{pmatrix}.\]
+A matriz $D \in \mathcal{M}_{5 \times 3}(\mathbb{Z}_{1114111})$ que representam os códigos decimais dos caracteres da palavra decriptografada será da forma 
+\[
+D = \begin{pmatrix}
+d_1 \\
+d_2 \\
+d_3 \\
+d_4 \\
+d_5
+\end{pmatrix},\]
+onde 
+\[
+d_i = (M^{-1} c_i)^T, \quad \forall i \in \{1, 2, 3, 4, 5 \}.
+\]
+
+Para realizar este procedimento, precisamos garantir que $M$ possui inversa em $\mathbb{Z}_{1114111}.$ Pela Regra de Laplace, 
+\[
+\det \begin{pmatrix}
+1 & 0 & 0 \\
+1 & 3 & 1 \\
+1 & 2 & 0
+\end{pmatrix} = 1 \left| \begin{array}{cc} 3 & 1\\ 2 & 0  \end{array} \right| = -2.
+\]
+Como $-2$ é invertível em $\mathbb{Z}_{1114111}$ (de fato, $1114111 = 17 \cdot 2^{16} - 1$ é um número primo, e sabemos que $\mathbb{Z}_p$ é um corpo para todo $p$ primo, então todo elemento não-nulo é invertível), segue que a matriz $M$ é invertível em $\mathbb{Z}_{1114111}.$ Para computá-la, utilizaremos a seguinte fórmula:
+\[
+M^{-1} = (\det{M})^{-1} \mathrm{Adj}(M),
+\]
+onde $\mathrm{Adj}(M)$ representa a matriz adjunta de $M,$ definida como a matriz transposta da matriz de cofatores. Em nosso caso, temos que $\det(M)^{-1} = (-2)^{-1} = 557055,$ pois $(-2) \cdot 557055 \equiv 1 \pmod{1114111}.$ A matriz adjunta será
+\[
+\mathrm{Adj}(M) = (\mathrm{cof}(M))^T = \begin{bmatrix}
++\left| \begin{matrix} 3 & 1 \\ 2 & 0 \end{matrix} \right| &
+-\left| \begin{matrix} 1 & 1 \\ 1 & 0 \end{matrix} \right| &
++\left| \begin{matrix} 1 & 3 \\ 1 & 2 \end{matrix} \right| \\
+ & & \\
+-\left| \begin{matrix} 0 & 0 \\ 2 & 0 \end{matrix} \right| &
++\left| \begin{matrix} 1 & 0 \\ 1 & 0 \end{matrix} \right| &
+-\left| \begin{matrix} 1 & 0 \\ 1 & 2 \end{matrix} \right| \\
+ & & \\
++\left| \begin{matrix} 0 & 0 \\ 3 & 1 \end{matrix} \right| &
+-\left| \begin{matrix} 1 & 0 \\ 1 & 1 \end{matrix} \right| &
++\left| \begin{matrix} 1 & 0 \\ 1 & 3 \end{matrix} \right|
+\end{bmatrix}^T = \begin{pmatrix}
+-2 & 0 & 0 \\
+1 & 0 & -1 \\
+-1 & -2 & 3\\
+\end{pmatrix}.
+\]
+Logo,
+\[
+M^{-1} = 557055 \begin{pmatrix}
+-2 & 0 & 0 \\
+1 & 0 & -1 \\
+-1 & -2 & 3\\
+\end{pmatrix} = \begin{pmatrix}
+1 & 0 & 0 \\
+557055 & 0 & 557056 \\
+557056 & 1 & 557054\\
+\end{pmatrix}
+\]
+Agora, estamos aptos a determinar $d_i,$ para $i = 1, \ldots, 5.$ Lembrando que 
+\[ C = \begin{pmatrix}
+83 & 354 & 213  \\ 
+86 & 349 & 216  \\ 
+79 & 409 & 243  \\
+77 & 354 & 207 \\
+69 & 368 & 225
+\end{pmatrix} = \begin{pmatrix}
+c_1 \\
+c_2 \\
+c_3 \\
+c_4 \\
+c_5
+\end{pmatrix} \Rightarrow \begin{cases}
+c_1 = (83, 354, 213) \\
+c_2 = (86, 349, 216) \\
+c_3 = (79, 409, 243) \\
+c_4 = (77, 354, 207) \\
+c_5 = (69, 368, 225)
+\end{cases}.
+\]
+Com essas informações em mãos, e lembrando que os cálculos estão sendo realizados em $\mathbb{Z}_{1114111},$ temos
+\[
+d_1 = (M^{-1}c_1)^T =  \left(\begin{pmatrix}
+1 & 0 & 0 \\
+557055 & 0 & 557056 \\
+557056 & 1 & 557054\\
+\end{pmatrix}  \begin{pmatrix}
+83 \\
+354 \\
+213 \\
+\end{pmatrix}\right)^T = \left(\begin{matrix}
+83 \\
+164888493 \\
+164888504
+\end{matrix}\right)^T = (83, 65, 76)
+\]
+\[
+d_2 = (M^{-1}c_2)^T =  \left(\begin{pmatrix}
+1 & 0 & 0 \\
+557055 & 0 & 557056 \\
+557056 & 1 & 557054\\
+\end{pmatrix}  \begin{pmatrix}
+86 \\
+349\\
+216 \\
+\end{pmatrix}\right)^T = \left(\begin{matrix}
+86 \\
+168230826 \\
+168230829
+\end{matrix}\right)^T = (86, 65, 68)
+\]
+\[
+d_3 = (M^{-1}c_3)^T =  \left(\begin{pmatrix}
+1 & 0 & 0 \\
+557055 & 0 & 557056 \\
+557056 & 1 & 557054\\
+\end{pmatrix}  \begin{pmatrix}
+79 \\
+409\\
+243 \\
+\end{pmatrix}\right)^T = \left(\begin{matrix}
+79 \\
+179371953 \\
+179371955
+\end{matrix}\right)^T = (79, 82, 84)
+\]
+\[
+d_4 = (M^{-1}c_4)^T =  \left(\begin{pmatrix}
+1 & 0 & 0 \\
+557055 & 0 & 557056 \\
+557056 & 1 & 557054\\
+\end{pmatrix}  \begin{pmatrix}
+77 \\
+354\\
+207 \\
+\end{pmatrix}\right)^T = \left(\begin{matrix}
+77 \\
+158203827 \\
+158203844
+\end{matrix}\right)^T = (77, 65, 82)
+\]
+\[
+d_5 = (M^{-1}c_5)^T =  \left(\begin{pmatrix}
+1 & 0 & 0 \\
+557055 & 0 & 557056 \\
+557056 & 1 & 557054\\
+\end{pmatrix}  \begin{pmatrix}
+69 \\
+368\\
+225 \\
+\end{pmatrix}\right)^T = \left(\begin{matrix}
+69 \\
+163774395 \\
+163774382
+\end{matrix}\right)^T = (69, 78, 65)
+\]
+Portanto, a matriz $D \in \mathcal{M}_{5 \times 3}(\mathbb{Z}_{1114111})$ que contém os valores decimais do criptograma será
+\[
+D = \begin{pmatrix}
+d_1 \\
+d_2 \\
+d_3 \\
+d_4 \\
+d_5
+\end{pmatrix} = \begin{pmatrix}
+83 & 65 & 76 \\ 
+86 & 65 & 68 \\ 
+79 & 82 & 84 \\  
+77 & 65 & 82 \\ 
+69 & 78 & 65 
+\end{pmatrix}
+\]
+
+Agora, basta encontrar os respectivos caracteres que correspondem aos códigos Unicode acima descritos:
+\begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Código & Letra \\ \hline
+    65     &  A \\ \hline
+    68     &  D \\ \hline
+    69     &  E \\ \hline
+    76     &  L \\ \hline
+    77     &  M \\ \hline
+    78     &  N \\ \hline
+    79     &  O \\ \hline
+    82     &  R \\ \hline
+    83     &  S \\ \hline
+    84     &  T \\ \hline
+    86     &  V \\ \hline
+    \end{tabular}
+\end{center}
+
+Portanto, 
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+      83 & 65 & 76 & 86 & 65 & 68 & 79 & 82 & 84 & 77 & 65 & 82 & 69 & 78 & 65 \\ \hline
+      S & A & L & V & A & D & O & R & T & M & A & R & E & N & A \\ \hline
+    \end{tabular}
+\end{center}
+
+Assim, a mensagem decriptografada pela cifra de Hill é \newline 
+\newline \centering \textbf{SALVADORTMARENA}.
+\end{document}
